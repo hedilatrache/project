@@ -1,0 +1,12 @@
+{% extends 'store/main.html' %} {% load static %} {% block content %}
+
+<h1>Login</h1>
+<hr />
+{% if messages %} {% for message in messages %}
+<p>{{message}}</p>
+{% endfor %} {% endif %}
+<form action="" method="POST"style="margin-bottom:550px;">
+  {% csrf_token%} {{form.as_p}}
+  <input type="submit" value="Submit" class="btn btn-success"/>
+</form>
+{% endblock content %}

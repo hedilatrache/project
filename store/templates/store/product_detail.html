@@ -1,0 +1,9 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<h3>{{data.name}}</h3>
+<h3>{{data.price|floatformat:0}} DT</h3>
+<img class="thumbnail" src="{{data.imageURL}}" style="margin-bottom:auto; height:500px; width: 700px; margin-top: auto; ">
+<h3>{{data.descriptions}}</h3>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Register</h1>
+<hr />
+{% if messages %} {% for message in messages %}
+<p>{{message}}</p>
+{% endfor %} {% endif %}
+<form action="" method="POST"style="margin-bottom:550px;">
+  {% csrf_token%} <label for="floatingInputGroup1">Nom</label><br>{{form.username}} </br><label for="floatingInputGroup1">Email</label><br>{{form.email}}</br><label for="floatingInputGroup1">mot de passe</label><br>{{form.password1}} </br><label for="floatingInputGroup1">confimer mot de passe</label> <br>{{form.password2}} </br> 
+  <br>
+  <input type="submit" value="valider" class="btn btn-success"/>
+</form>
+{% endblock content %}
